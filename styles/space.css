@@ -601,7 +601,7 @@ footer{
 
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1920px){
   .charts{
     display: flex;
     flex-wrap: wrap;
@@ -615,6 +615,23 @@ footer{
 .long{
   width: 100%;
 }
+
+.span{
+  font-size: 2em;
+}
+
+.mature{
+  font-size: 1.4em;
+}
+
+.iconsChart{
+width: 70px;
+}
+
+.stockCharts{
+  min-width: 300px;
+  min-height: 300px;
+}
 }
 
 @media screen and (max-width:767px){
@@ -626,7 +643,7 @@ footer{
   .nav-links{
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 80vh;
     top: 8vh;
     background-color: #fbfbfb;
     display: flex;
@@ -642,6 +659,7 @@ footer{
   }
 
   .nav-links li{
+    overflow-x: hidden;
     opacity: 0;
 
   }
