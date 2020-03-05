@@ -676,6 +676,9 @@ width: 70px;
     cursor: pointer;
   }
 
+#maxHeight{
+  max-height: 210px;
+}
 
 
 }
