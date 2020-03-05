@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="styles/space.css">
+	<link rel="stylesheet" href="styles/fonts.css">
+	<title>Data/APIs 1</title>
+</head>
+
+<body>
+	<nav>
+		<div class="logo">
+
+
+			<img class="logo" src="img/spacex-vector-logo.svg" alt="logo">
+		</div>
+
+		<ul class="nav-links">
+			<li>
+				<a href="#">TRIP</a>
+			</li>
+			<li>
+				<a href="#">YOUR ACCOUNT</a></li>
+			<li>
+				<a href="#">ABOUT</a>
+			</li>
+
+		</ul>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+
+		</div>
+	</nav>
+
+	<div class="front-Page">
+		<div class="timer">
+			<h1 id="takeOff">TAKE OFF</h1>
+			<table class="countDownContainer">
+				<tr class="numbers">
+					<td id="days">107</td>
+					<td id="hours">16</td>
+					<td id="minutes">32</td>
+					<td id="secondes">46</td>
+				</tr>
+				<tr class="labels">
+					<td>Days</td>
+					<td>Hours</td>
+					<td>Minutes</td>
+					<td>Seconds</td>
+				</tr>
+
+
+
+			</table>
+			<div class="people">
+				<div class="crew">
+					<div class="intel col-9">
+						<h1>22</h1>
+						<p>Crew members</p>
+					</div>
+					<div class="icons col-3">
+						<img class="astro" src="icons/astronauts.svg" alt="logo">
+					</div>
+
+				</div>
+				<div class="passengers">
+					<div class="intel col-9">
+						<h1>103</h1>
+						<p>passengers</p>
+					</div>
+					<div class="icons col-3">
+						<img class="astro" src="icons/astronaut.svg" alt="logo">
+					</div>
+				</div>
+			</div>
+			<div class="line">
+
+			</div>
+		</div>
+
+
+	</div>
+	<div class="intelShip-Page">
+		<h1>Intel ship</h1>
+		<div class="charts">
+			<div class="chart">
+
+
+				<div class="intel-Chart">
+
+					<div class="intel-Chart-intel col-9">
+						<span>Total fuel</span>
+						<p class="mature">Kerosine(L)x10^5</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/fuel.svg" alt="Fuel">
+					</div>
+				</div>
+				<canvas id="fuel" height="300" width="300"></canvas>
+			</div>
+
+			<div class="chart">
+
+				<div class="intel-Chart">
+
+					<div id="speedIntel" class="intel-Chart-intel col-9">
+						<span>Speed</span>
+						<p class="mature">Kilometres per hour(km/h)x10^3</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/speed.svg" alt="Fuel">
+					</div>
+				</div>
+				<canvas id="speed" height="300" width="300"></canvas>
+			</div>
+
+			<div class="chart">
+
+				<div class="intel-Chart">
+
+					<div id="acceIntel" class="intel-Chart-intel col-9">
+						<span>Acceleration</span>
+						<p class="mature">(m/s^2)</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/acce.svg" alt="Fuel">
+					</div>
+				</div>
+				<canvas id="acce" height="300" width="300"></canvas>
+			</div>
+
+			<div class="chart">
+
+				<div class="intel-Chart">
+
+					<div id="gIntel" class="intel-Chart-intel col-9">
+						<span>G-Force</span>
+						<p class="mature">(1G = 9.8m/s^2)</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/revolution.svg" alt="Fuel">
+					</div>
+				</div>
+				<canvas id="g-force" height="300" width="300"></canvas>
+			</div>
+
+
+
+
+
+	</div>
+	</div>
+	<div class="spaceTime-page">
+		<h1>Surroundings</h1>
+		<div class="charts">
+			<div class="chart">
+
+				<div class="intel-Chart">
+
+					<div id="gravIntel" class="intel-Chart-intel col-9">
+						<span>Gravity</span>
+						<p class="mature">(m/s^2)</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/grav.svg" alt="Fuel">
+					</div>
+				</div>
+				<canvas id="gravity" height="300" width="300"></canvas>
+			</div>
+
+			<div class="chart">
+
+				<div class="intel-Chart">
+
+					<div id="atmosIntel" class="intel-Chart-intel col-9">
+						<span>Atmosfeer</span>
+						<p class="mature">(surrounding gases on mars)</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/humidity.svg" alt="Fuel">
+					</div>
+				</div>
+				<canvas id="atmos" height="300" width="300"></canvas>
+			</div>
+
+			<div class="long chart">
+
+				<div class="intel-Chart">
+
+					<div id="atmosIntel" class="intel-Chart-intel col-9">
+						<span>
+							Distance</span>
+						<p class="mature">~54.6 million Kilometres</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/road.svg" alt="Fuel">
+					</div>
+				</div>
+				<div class="distance">
+					<div class="process-data">
+						<img id="earth" class="planets" src="icons/world.svg" alt="earth">
+						<h2 >51.3 million <br>
+							Kilometers to go</h2>
+						<img id="mars" class="planets" src="icons/planet.svg" alt="mars">
+					</div>
+					<div class="rocketcontainer">
+						<img id="rocket" src="icons/rockett.svg" alt="rocket">
+					</div>
+
+					<div class="process-bar">
+						<div class="process-fill">
+
+						</div>
+
+					</div>
+					<div class="process-labels">
+						<h3>Aarde</h3>
+						<h2 id="monthsToGo">3 months togo</h2>
+						<h3>Mars</h3>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		</div>
+
+
+	<div class="stocks">
+		<h1>stocks</h1>
+		<div class="charts">
+			<div class="long chart">
+
+				<div class="intel-Chart">
+
+					<div id="gravIntel" class="intel-Chart-intel col-9">
+						<span>Stocks</span>
+						<p class="mature">water and food supp</p>
+					</div>
+					<div class="icons-Container col-2">
+						<img class="icons-Chart" src="icons/wine.svg" alt="Fuel">
+					</div>
+				</div>
+				<div class="twoChart">
+					<canvas id="water" class="stockCharts" height="100" width="100"></canvas>
+					<canvas id="food" class="stockCharts" height="300" width="300"></canvas>
+				</div>
+
+			</div>
+	</div>
+	<div class="Tools">
+			<h1>Tools</h1>
+			<div class="tools-container">
+
+
+
+
+			<div class="tool-container">
+				<div class="tool-title">
+					<span>Weigt on mars</span>
+				</div>
+				<div class="tool-content">
+					<h2>Gewicht op aarde(kg)</h2>
+					<input id="weight" class="input" type="number" name="" value="">
+					<h2>Gevoel gewicht op mars:</h2>
+					<h3 id="weightMars"></h3>
+					<button id="buttonCalc" class="buttons-tools" type="button" name="button">Calculate</button>
+				</div>
+
+		</div>
+
+		<div class="tool-container">
+			<div class="tool-title">
+				<span>your age on mars</span>
+			</div>
+			<div class="tool-content">
+				<h2>Jouw leeftijd op aarde(jaren)</h2>
+				<input id="age" class="input" type="number" name="" value="">
+				<h2>You mars leeftijd is:</h2>
+				<h3 id="ageMars"></h3>
+				<button id="ageCalc" class="buttons-tools" type="button" name="button">Calculate</button>
+			</div>
+
+	</div>
+	</div>
+	</div>
+	<footer>
+		<h3>Created by Tijn Roozen</h3>
+		<h3>CMD 2C</h3>
+	</footer>
+</body>
+
+
+<script type="text/javascript" src="javascript/countDown.js">
+</script>
+
+<script type="text/javascript" src="javascript/Chart.bundle.js">
+</script>
+
+<script type="text/javascript" src="javascript/bruh.js">
+</script>
+<script type="text/javascript" src="javascript/charts.js">
+</script>
+
+
+</html>
