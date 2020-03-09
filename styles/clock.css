@@ -1,5 +1,5 @@
 .clock_window{
-  height: 800px;
+  height: 750px;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -52,11 +52,11 @@
 .clock::before{
   content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: #203A43;
   border-radius: 50%;
-  z-index: 10000;
+  z-index: 13;
 }
 
 .clock .hour,
@@ -135,4 +135,199 @@
 
 .timer{
   margin-top: 5%;
+  margin-bottom: 30%;
+}
+
+@media screen and (min-width:768px){
+  .clock_window{
+    height: 950px;
+  }
+
+  .moveGround{
+    width: 208px;
+    height: 208px;
+  }
+  .clock{
+    width: 432px;
+    height: 432px;
+    border-size: 5px;
+    box-shadow: 0 -25px 25px rgba(4,144,140, 0.05),
+                inset 0 -25px 25px rgba(4,144,140, 0.05),
+                0 -25px 25px rgba(1,52,73, 0.3),
+                inset 0 -25px 25px rgba(1,52,73, 0.3);
+
+    margin: 10% 0% 5% 0%;
+  }
+  .clock::before{
+    width: 19px;
+    height: 19px;
+  }
+
+  .clock .hour, .hr{
+    width: 176px;
+    height: 176px;
+  }
+
+  .clock .min, .mn{
+    width: 256px;
+    height: 256px;
+  }
+
+
+  .clock .sec, .sc{
+    width: 304px;
+    height: 304px;
+  }
+
+  .hr::before{
+    width: 9px;
+    height: 88px;
+  }
+
+  .mn::before{
+    width: 6px;
+    height: 128px;
+  }
+
+  .sc::before{
+    width: 2px;
+    height: 176px;
+  }
+}
+@media screen and (min-width:1024px){
+  .clock_window{
+    height: 1500px;
+  }
+
+  .moveGround{
+    width: 312px;
+    height: 312px;
+  }
+  .clock{
+    width: 648px;
+    height: 648px;
+    border-width: 8px;
+    box-shadow: 0 -35px 35px rgba(4,144,140, 0.05),
+                inset 0 -35px 25px rgba(4,144,140, 0.05),
+                0 -35px 35px rgba(1,52,73, 0.3),
+                inset 0 -35px 35px rgba(1,52,73, 0.3);
+
+
+  }
+  .clock::before{
+    width: 29px;
+    height: 29px;
+  }
+
+  .clock .hour, .hr{
+    width: 264px;
+    height: 264px;
+  }
+
+  .clock .min, .mn{
+    width: 384px;
+    height: 384px;
+  }
+
+
+  .clock .sec, .sc{
+    width: 456px;
+    height: 456px;
+  }
+
+  .hr::before{
+    width: 14px;
+    height: 132px;
+  }
+
+  .mn::before{
+    width: 9px;
+    height: 192px;
+  }
+
+  .sc::before{
+    width: 3px;
+    height: 264px;
+  }
+}
+
+@media screen and (min-width:1920px){
+  .clock_window{
+    height: 1500px;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .timer{
+    margin: -20% 0 0 15%;
+  }
+
+  .titleClock{
+    margin-top: 0%;
+  }
+
+  .moveGround{
+    width: 312px;
+    height: 312px;
+  }
+  .clock{
+    width: 648px;
+    height: 648px;
+    border-width: 8px;
+    margin-top: -15%;
+    box-shadow: 0 -35px 35px rgba(4,144,140, 0.05),
+                inset 0 -35px 25px rgba(4,144,140, 0.05),
+                0 -35px 35px rgba(1,52,73, 0.3),
+                inset 0 -35px 35px rgba(1,52,73, 0.3);
+
+
+  }
+  .clock::before{
+    width: 29px;
+    height: 29px;
+  }
+
+  .clock .hour, .hr{
+    width: 264px;
+    height: 264px;
+  }
+
+  .clock .min, .mn{
+    width: 384px;
+    height: 384px;
+  }
+
+
+  .clock .sec, .sc{
+    width: 456px;
+    height: 456px;
+  }
+
+  .hr::before{
+    width: 14px;
+    height: 132px;
+  }
+
+  .mn::before{
+    width: 9px;
+    height: 192px;
+  }
+
+  .sc::before{
+    width: 3px;
+    height: 264px;
+  }
+
+  .numbers td{
+    font-size: 4em;
+    padding: 10px;
+    border-left: 2px #052E44 solid;
+  }
+
+  .labels td{
+    font-size: 1.0em;
+    font-family: Montserrat;
+    background-color: #052E44z
+  }
+
 }
