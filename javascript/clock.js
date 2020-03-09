@@ -26,7 +26,7 @@ setInterval(() =>{
 
 
 
-  lit.style.transform = `rotateZ(${(light - 200) + (mm/24)}deg)`
+  lit.style.transform = `rotateZ(${(light - 220) + (mm/24)}deg)`
   hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
   mn.style.transform = `rotateZ(${mm}deg)`;
   sc.style.transform = `rotateZ(${ss}deg)`;

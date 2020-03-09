@@ -544,7 +544,7 @@ footer{
   }
 
   .people > div{
-    padding: 0% 10%;
+    padding: 2% 20% 2% 5%;
   }
   .icons img{
     margin: 40% 0% 0% 80%;
@@ -596,6 +596,10 @@ footer{
     width: 45%;
     margin-left: 5%;
 
+  }
+
+  .icons img {
+      margin: 40% 0% 0% 300%;
   }
 
 

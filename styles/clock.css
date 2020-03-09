@@ -1,5 +1,5 @@
 .clock_window{
-  height: 750px;
+  height: 1000px;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/daynighttt.svg);
+  background-image: url(../img/dayNight.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -140,7 +140,7 @@
 
 @media screen and (min-width:768px){
   .clock_window{
-    height: 950px;
+    height: 1300px;
   }
 
   .moveGround{
@@ -196,7 +196,7 @@
 }
 @media screen and (min-width:1024px){
   .clock_window{
-    height: 1500px;
+    height: 1800px;
   }
 
   .moveGround{
@@ -253,7 +253,7 @@
 
 @media screen and (min-width:1920px){
   .clock_window{
-    height: 1500px;
+    height: 2000px;
     width: 70%;
     flex-direction: row;
     flex-wrap: wrap;
