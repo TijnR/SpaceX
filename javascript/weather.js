@@ -1,7 +1,7 @@
 var weather;
 
 
-var api = "http://api.openweathermap.org/data/2.5/weather?q=";
+var api = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 var city = "haarlem";
 var apikey = "&appid=e5a18e332c3804c053bf3b167b498945";
