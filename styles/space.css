@@ -242,7 +242,7 @@ footer{
   border: 1px rgb(224,128,32) solid;
 }
 
-.rocketcontainer{
+.rocket{
   display: flex;
   width: 90%;
   margin: auto;
@@ -410,7 +410,7 @@ footer{
   .timer{
     justify-content: center;
   }
-  .countDownContainer{
+  .countDown{
     margin: auto;
   }
 
