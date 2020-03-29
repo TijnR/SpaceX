@@ -8,7 +8,7 @@ var apikey = "&appid=e5a18e332c3804c053bf3b167b498945";
 var units = "&units=metric"
 
 var input;
-
+var timeZone;
 function $(get){
   return document.querySelector(get);
 }
@@ -17,11 +17,30 @@ function setup(){
   var gone = document.getElementById('city');
   gone.addEventListener("blur", function(event) {
     getWeather();
+
+    if (typeof timeZone !== 'undefined') {
+      console.log("testgood");
+      clearInterval(setDate(timeZone));
+    } else if(timeZone === null){
+    alert('Variable "comment" is null.');
+  } else {
+    console.log("test");
+  }
+
   });
 
   gone.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         getWeather();
+        if (typeof timeZone !== 'undefined') {
+          console.log("testgood");
+          clearInterval(setDate(timeZone));
+        } else if(timeZone === null){
+        alert('Variable "comment" is null.');
+      } else {
+        console.log("test");
+      }
+
     }
   });
 
@@ -65,7 +84,7 @@ function gotData(data){
   }
   var temp = weather.main.temp;
   var feels = weather.main.feels_like;
-  var timeZone = weather.timezone;
+  timeZone = weather.timezone;
   var wind = {
     speed: weather.wind.speed,
     deg: weather.wind.deg
@@ -108,22 +127,33 @@ function setCoord(lon, lat){
 }
 
 function setTemp(tempra, feelsLike){
+  var backColor = document.getElementById('toggle').style.backgroundColor;
+  console.log(document.getElementById('toggle').style.backgroundColor);
+  if (backColor == "#00F9FF") {
+       backColor = "#ff073a";
+   } else if (document.getElementById('toggle').style.backgroundColor == "#ff073a") {
+     backColor = "#00F9FF";
+   } else{
+       document.getElementById('toggle').style.backgroundColor = "#00F9FF";
+   }
+   console.log(document.getElementById('toggle').style.backgroundColor);
   $('#temp').innerHTML = tempra+"º";
   $('#feels').innerHTML = feelsLike+ "º";
 }
 
 function setDate(zone){
   let day = new Date();
+  console.log(day);
+  let extraH = (zone/3600);
 
-  let h = day.getHours();
+  let h = day.getHours() - 2 + extraH;
   let m = day.getMinutes();
   let s = day.getSeconds();
   let mnd = day.getMonth() + 1;
 
-  let extraH = (zone/3600) - 1;
 
 
-  h += extraH;
+
   if (h >= 24) {
     h -= 24;
   } else if(h < 0){
@@ -135,15 +165,12 @@ function setDate(zone){
   s = (s < 10) ? "0" + s : s;
   mnd = (mnd < 10) ? "0" + mnd : mnd;
 
-  console.log(h);
-  console.log(m);
-  console.log(s);
-  console.log(mnd);
 
-  $('#hours').innerHTML = h;
-  $('#minuten').innerHTML = m;
-  $('#seconden').innerHTML = s;
-  $('#maanden').innerHTML = mnd;
+
+  $('#hr').innerHTML = h;
+  $('#mt').innerHTML = m;
+  $('#sc').innerHTML = s;
+  $('#md').innerHTML = mnd;
 
 
 

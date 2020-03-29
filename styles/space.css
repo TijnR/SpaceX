@@ -113,7 +113,10 @@ footer{
 }
 .timer{
   margin: auto;
+}
 
+.countDownContainer{
+  margin: auto;
 }
 
 
@@ -136,7 +139,7 @@ footer{
 .labels td{
   font-size: 0.6em;
   font-family: Montserrat;
-  background-color: #052E44z
+
 }
 
 .line{
@@ -344,9 +347,7 @@ footer{
   align-items: stretch;
 }
 
-#mars{
 
-}
 
 #rocket{
   transform: rotate(20deg);
@@ -404,7 +405,7 @@ footer{
   .labels td{
     font-size: 1em;
     font-family: Montserrat;
-    background-color: #052E44z
+
   }
 
   .timer{
