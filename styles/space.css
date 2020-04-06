@@ -2,10 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-
 }
 
+/* geeft die achtergrond gradient */
 html{
   background: rgb(0,57,77);
   background: linear-gradient(60deg, rgba(0,57,77,1) 0%, rgba(28,13,54,1) 27%, rgba(23,22,58,1) 48%, rgba(0,45,75,1) 77%, rgba(26,13,56,1) 100%);
@@ -18,8 +17,6 @@ margin: 0;
   color: #2AC1BA;
 }
 
-
-
 nav{
   background-color: #fbfbfb;
   display: flex;
@@ -28,7 +25,7 @@ nav{
   min-height: 8vh;
 }
 
-H1{
+h1{
   font-family: aspace;
   font-weight: lighter;
   font-size: 1em;
@@ -59,25 +56,23 @@ span{
   font-size: 1.1em;
 }
 
+/* hoogte van footer */
 footer{
   height: 50px;
 }
 
-
-
+/* pointer toegevoegt zodat je kan zien dat je kan klikken */
 .logo{
   cursor: pointer;
   width: 130px;
-
 }
 
+
+/* navlink styling */
 .nav-links{
   display: flex;
   width: 45%;
   justify-content: space-around;
-
-
-
 
 }
 .nav-links li{
@@ -92,10 +87,8 @@ footer{
 }
 .burger{
   display: none;
-
-
-
 }
+
 .burger div{
   width: 25px;
   height: 3px;
@@ -105,12 +98,14 @@ footer{
 }
 
 
+/* header styling */
 .front-Page{
   display: flex;
   margin-top: 10px;
   text-align: center;
-
 }
+
+/* timer */
 .timer{
   margin: auto;
 }
@@ -118,8 +113,6 @@ footer{
 .countDownContainer{
   margin: auto;
 }
-
-
 
 .numbers{
   margin-top: 10%;
@@ -142,17 +135,19 @@ footer{
 
 }
 
+/* kleine lijn onderaan de header styling */
 .line{
   min-height: 1px;
   margin-top: 3%;
   background-color: #052E44;
 }
 
-
+/* styling containers voor mensen aanbord */
 .people{
   display: flex;
   margin-top: 10%;
 }
+
 .people>div{
   display: flex;
   background-color: #013449;
@@ -166,19 +161,19 @@ footer{
   width: 23px;
 }
 
+
 .intelShip-Page{
   margin-top: 50px;
   margin:auto;
   width: 80%;
-
   text-align: center;
-
-
 }
 
 .intelShip-Page h1{
   margin-bottom: 10%;
 }
+
+/* styling voor alle charts */
 .chart{
   width: 100%;
   margin-bottom: 15%;
@@ -213,16 +208,14 @@ footer{
   margin-top: 50px;
   margin:auto;
   width: 80%;
-
   text-align: center;
-
-
 }
 
 .spaceTime-page h1{
   margin-bottom: 10%;
 }
 
+/* process styling */
 .process-data{
   display: flex;
   width: 90%;
@@ -263,13 +256,12 @@ footer{
   justify-content: space-between;
 }
 
+
 .stocks{
   margin-top: 50px;
   margin:auto;
   width: 80%;
-
   text-align: center;
-
 }
 
 .twoChart{
@@ -285,6 +277,8 @@ footer{
   margin-bottom: 5%;
 }
 
+
+/* styling tools */
 .tools{
   margin-top: 50px;
   margin:auto;
@@ -342,17 +336,13 @@ footer{
 }
 
 #speedIntel{
-
   padding-left: 25%;
   align-items: stretch;
 }
 
-
-
 #rocket{
   transform: rotate(20deg);
   width: 15px;
-
 }
 
 #weightMars{
@@ -369,7 +359,7 @@ footer{
 
 
 
-
+/* tablet/small screen */
 @media screen and (min-width:768px){
 
   H1{
@@ -478,12 +468,11 @@ footer{
 
 }
 
-
+/* big tablet/medium screen */
 @media screen and (min-width:1024px){
 
   H1{
     font-size: 2.2em;
-
   }
 
   h2{
@@ -509,7 +498,6 @@ footer{
   .logo{
     cursor: pointer;
     width: 200px;
-
   }
 
   .nav-links{
@@ -528,7 +516,6 @@ footer{
   .chart{
     width: 45%;
     margin-left: 5%;
-
   }
 
   .long{
@@ -606,6 +593,7 @@ footer{
 
 }
 
+/* full screen/laptop */
 @media screen and (min-width:1920px){
   .people>div{
     display: flex;
@@ -652,11 +640,12 @@ width: 70px;
 }
 }
 
+/* extra voor mobile styling voor hamburger*/
 @media screen and (max-width:767px){
+
   body{
     overflow-x: hidden;
   }
-
 
   .nav-links{
     position: absolute;
@@ -701,7 +690,7 @@ width: 70px;
 }
 
 
-
+/* animatie voor hamburger menu */
 @keyframes navLinkFade{
   from{
     opacity: 0;
@@ -726,6 +715,7 @@ width: 70px;
 }
 
 
+/* voor grids */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}

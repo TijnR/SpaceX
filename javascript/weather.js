@@ -1,30 +1,36 @@
+// variable to get weather later
 var weather;
 
-
+// elements to create the url
 var api = "https://api.openweathermap.org/data/2.5/weather?q=";
-
 var city = "haarlem";
 var apikey = "&appid=e5a18e332c3804c053bf3b167b498945";
 var units = "&units=metric"
 
+// variable to get input of user
 var input;
+
+// variable to get timezone later
 var timeZone;
+
+// function to easly get elements
 function $(get){
   return document.querySelector(get);
 }
 
+// standard setup function porvided bij j5.js
 function setup(){
   var gone = document.getElementById('city');
+
+  // two functions for getting the input of user. By leaving the input fielt or user enter or a other key.
   gone.addEventListener("blur", function(event) {
     getWeather();
 
     if (typeof timeZone !== 'undefined') {
-      console.log("testgood");
       clearInterval(setDate(timeZone));
     } else if(timeZone === null){
     alert('Variable "comment" is null.');
   } else {
-    console.log("test");
   }
 
   });
@@ -33,28 +39,29 @@ function setup(){
     if (event.keyCode === 13) {
         getWeather();
         if (typeof timeZone !== 'undefined') {
-          console.log("testgood");
+
           clearInterval(setDate(timeZone));
         } else if(timeZone === null){
         alert('Variable "comment" is null.');
       } else {
-        console.log("test");
       }
 
     }
   });
 
+  // get city from input
   input = select('#city');
 
-
+  // function get weather: loading the json by the provided url
   function getWeather(){
   var url = api + input.value() + apikey + units;
-  console.log(url);
+
   loadJSON(url, gotData);
 
   }
 }
 
+// function to get the sunrise and sunset time by a sunset API that uses the lon and lat that we got from the weather api
 function getSunData(lng, lt){
   let sunApi = "https://api.sunrise-sunset.org/json?";
   // lat=36.7201600&lng=-4.4203400&date=today
@@ -74,6 +81,8 @@ function setSunData(data){
 
 }
 
+
+// starts when json is loaded
 function gotData(data){
   weather = data;
   console.log(weather);
@@ -95,6 +104,7 @@ function gotData(data){
   var humi = weather.main.humidity;
   var pressure = weather.main.pressure;
 
+  // all the get functions to set data from the api
   setCount(count);
   setCoord(coord.lon, coord.lat);
   setTemp(temp, feels);
@@ -127,32 +137,56 @@ function setCoord(lon, lat){
 }
 
 function setTemp(tempra, feelsLike){
-  var backColor = document.getElementById('toggle').style.backgroundColor;
-  console.log(document.getElementById('toggle').style.backgroundColor);
-  if (backColor == "#00F9FF") {
-       backColor = "#ff073a";
-   } else if (document.getElementById('toggle').style.backgroundColor == "#ff073a") {
-     backColor = "#00F9FF";
-   } else{
-       document.getElementById('toggle').style.backgroundColor = "#00F9FF";
-   }
-   console.log(document.getElementById('toggle').style.backgroundColor);
+
+  var backColor = $('#toggle').style.backgroundColor;
+  var backButton = document.getElementById('toggle');
+  let toggleOn = true;
+  console.log(backColor);
+  console.log(backButton);
+
+  // addEventListener that checks if div toggle is toggled
+  backButton.addEventListener("click", function(){
+    console.log("backColor: " + backColor);
+    // if toggled set background color to red and change value
+     if (toggleOn) {
+         $('#toggle').style.backgroundColor = "rgb(255,7,58)";
+         backColor = "rgb(255,7,58)";
+         console.log("tempra: "+ tempra);
+         console.log(feelsLike);
+         tempra = (tempra * 9)/5 + 32;
+         feelsLike = (feelsLike * 9)/5 + 32;
+         console.log("succes");
+         toggleOn = false;
+     } else{
+       backColor = 'rgb(0, 249, 255)';
+      $('#toggle').style.backgroundColor = 'rgb(0, 249, 255)';
+      tempra = (tempra -32)*5/9;
+      feelsLike = (feelsLike -32)*5/9;
+        console.log("failure");
+        toggleOn = true;
+     }
+     tempra = parseFloat(tempra).toFixed(1)
+     feelsLike = parseFloat(feelsLike).toFixed(1)
+     $('#temp').innerHTML = tempra+"º";
+     $('#feels').innerHTML = feelsLike+ "º";
+  });
+
+
+
   $('#temp').innerHTML = tempra+"º";
   $('#feels').innerHTML = feelsLike+ "º";
 }
 
+// set date function, similar as clock.css
 function setDate(zone){
   let day = new Date();
-  console.log(day);
+
   let extraH = (zone/3600);
 
   let h = day.getHours() - 2 + extraH;
   let m = day.getMinutes();
   let s = day.getSeconds();
   let mnd = day.getMonth() + 1;
-
-
-
 
   if (h >= 24) {
     h -= 24;
@@ -172,17 +206,18 @@ function setDate(zone){
   $('#sc').innerHTML = s;
   $('#md').innerHTML = mnd;
 
-
-
 }
+
 
 function setWind(speed, deg){
 let wind_speed = speed * 3.6;
 wind_speed = parseFloat(wind_speed).toFixed(1);
 $('#windspeed').innerHTML = wind_speed + "km/u";
 var arrow = $("#arrow");
+  // arrow icon changes to the correct angle the wind is moving
   arrow.style.transform = `rotateZ(${deg}deg)`;
 }
+
 
 function getWindSpeedScore(speed, deg){
   let wind_speed = speed * 3.6;
@@ -216,6 +251,8 @@ function getWindSpeedScore(speed, deg){
         return 0.2;
     }   else if(deg >=70 && deg< 110 || deg >=250 && deg < 290||  deg >= 225 && deg < 250 || deg >= 290 && deg< 315){
         return 0;
+  }     else if(typeof deg == 'undefined'){
+        return 0.5;
   }
     }
 }
@@ -233,16 +270,16 @@ return windscore;
 function setVisibility(visible){
   let visi = $("#visible");
   let persvisi = visible/100;
-  if (persvisi) {
-    persvisi =persvisi;
+  console.log("persvisi: " + persvisi);
+  if (typeof persvisi !== 'undefined') {
+    persvisi = persvisi;
   } else {
-    persvisi = 50;
+    persvisi = 5;
   }
   visi.innerHTML = visible + "km";
-
-
-
 }
+
+
 function getVisibilityScore(visible){
   visiScore = 0;
   if (visible) {
@@ -283,8 +320,12 @@ function setCloud(cloudValue){
 function getCloudScore(cloudValue){
   return (1 - (cloudValue/100));
 }
-
+// this score function gives a score that is made up and only has little correctness
 function getScore(windSpeedScore, windDegScore, visiScore, cloudScore){
+  console.log(windSpeedScore);
+  console.log(windDegScore);
+  console.log(visiScore);
+  console.log(cloudScore);
   let score = ((windSpeedScore*5)+(windDegScore*1.5)+(visiScore*2.5)+(cloudScore*1));
   score = parseFloat(score).toFixed(1);
   $('.score').innerHTML = score;

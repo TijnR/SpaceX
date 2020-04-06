@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <!-- <link rel="stylesheet" href="styles/clock.css"> -->
     <link rel="stylesheet" href="styles/back.css">
+    <link rel="shortcut icon" href="img/x.ico" type="image/x-icon"/>
     <title>Landing</title>
   </head>
   <body>
@@ -38,6 +39,7 @@
     </nav>
 
     <div class="container">
+      <!-- title an searchbar -->
       <header>
         <h1 id="bigMan">Return flight</h1>
         <p>find the best location for landing</p>
@@ -47,6 +49,7 @@
 
 
       </div>
+      <!-- country landing score and coord -->
       <div class="headItems">
         <div class="item-country">
           <p>Country:</p> <h3 class="country"></h3>
@@ -60,9 +63,10 @@
           <h3>Lat: <span class="lat"></span></h3>
         </div>
       </div>
+      <!-- container for all items -->
       <div class="items">
 
-
+        <!-- container temparauur -->
         <div class="item temp-container">
           <div class="top">
             <div class="img-container">
@@ -71,8 +75,8 @@
             <div class="title-container">
               <h1>Temp</h1>
             </div>
-
           </div>
+
           <div class="fielt">
             <div class="toggle-container">
               <h3 id="cel">Cº</h3>
@@ -90,7 +94,7 @@
         </div>
 
 
-
+        <!-- container time -->
         <div class="item time-container">
           <div class="top">
             <div class="img-container">
@@ -99,8 +103,8 @@
             <div class="title-container">
               <h1>Time</h1>
             </div>
-
           </div>
+
           <div class="fielt">
             <table id="smallTimer">
             <tr class="numbers">
@@ -119,6 +123,8 @@
           </div>
         </div>
 
+
+        <!-- container wind -->
         <div class="item wind-container">
           <div class="top">
             <div class="img-container">
@@ -127,8 +133,8 @@
             <div class="title-container">
               <h1>Wind</h1>
             </div>
-
           </div>
+
           <div class="fielt">
             <h3>Speed</h3>
             <h2 id="windspeed" class="tempNumbers">0.0km/u</h2>
@@ -137,6 +143,7 @@
           </div>
         </div>
 
+        <!-- container Visibility -->
         <div class="item visi-container">
           <div class="top">
             <div class="img-container">
@@ -147,13 +154,14 @@
             </div>
 
           </div>
-          <div class="fielt">
+          <div class="fielt distance">
             <h3>Distance</h3>
             <h2 id="visible" class="tempNumbers">0.0km</h2>
 
           </div>
         </div>
 
+        <!-- container sunset and sunrise -->
         <div class="item sun-container">
           <div class="top">
             <div class="img-container">
@@ -181,6 +189,7 @@
           </div>
         </div>
 
+        <!-- cloud container -->
         <div class="item cloud-container">
           <div class="top">
             <div class="img-container">
@@ -189,16 +198,16 @@
             <div class="title-container">
               <h1>Clouds</h1>
             </div>
-
           </div>
+
           <div class="fielt">
             <img id="cloud" src="icons/cloud.svg" alt="cloud">
             <h3 class="cloudiness"></h3>
-
           </div>
         </div>
       </div>
 
+      <!-- footer with name -->
       <footer id="foot" class="col-12">
         <h3 class="footerClock">Created by Tijn Roozen</h3>
         <h3>CMD 2C</h3>

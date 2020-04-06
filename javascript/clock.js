@@ -26,6 +26,12 @@ setInterval(() =>{
   let seconden = day.getSeconds();
   let maand = day.getMonth();
 
+  uren = (uren < 10) ? "0" + uren : uren;
+  minuten = (minuten < 10) ? "0" + minuten : minuten;
+  seconden = (seconden < 10) ? "0" + seconden : seconden;
+  maand = (maand < 10) ? "0" + maand : maand;
+  console.log(minuten);
+
 
 
 // speciale rotatie die er voorzorg dat die om het middelste punt draait

@@ -5,19 +5,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- css voor page -->
 	<link rel="stylesheet" href="styles/space.css">
+	<!-- css voor fonts -->
 	<link rel="stylesheet" href="styles/fonts.css">
-	<title>Data/APIs 1</title>
+	<link rel="shortcut icon" href="img/x.ico" type="image/x-icon"/>
+	<title>SpaceX xt-2</title>
 </head>
 
 <body>
+	<!-- nav-bar -->
 	<nav>
+		<!-- logo -->
 		<div class="logo">
-
-
 			<img class="logo" src="img/spacex-vector-logo.svg" alt="logo">
 		</div>
-
+		<!-- items -->
 		<ul class="nav-links">
 			<li>
 				<a href="index.html">TRIP</a>
@@ -27,19 +30,22 @@
 			<li>
 				<a href="clock.html">CLOCK</a>
 			</li>
-
 		</ul>
+		<!-- hamburger menu gemaakt door drie divs -->
 		<div class="burger">
 			<div class="line1"></div>
 			<div class="line2"></div>
 			<div class="line3"></div>
-
 		</div>
 	</nav>
 
+	<!-- header -->
 	<div class="front-Page">
+
+		<!-- timer, title  -->
 		<div class="timer">
 			<h1 id="takeOff">TAKE OFF</h1>
+
 			<table class="countDownContainer">
 				<tr class="numbers">
 					<td id="days">107</td>
@@ -53,10 +59,9 @@
 					<td>Minutes</td>
 					<td>Seconds</td>
 				</tr>
-
-
-
 			</table>
+
+			<!-- twee containers die aangeeft hoeveel mensen aan bord zijn -->
 			<div class="people">
 				<div class="crew">
 					<div class="intel col-9">
@@ -78,6 +83,8 @@
 					</div>
 				</div>
 			</div>
+
+			<!-- 1px line -->
 			<div class="line">
 
 			</div>
@@ -85,14 +92,15 @@
 
 
 	</div>
+
+	<!-- intel ship grafieken -->
 	<div class="intelShip-Page">
 		<h1>Intel ship</h1>
 		<div class="charts">
+
+			<!-- linechart fuel -->
 			<div class="chart">
-
-
 				<div class="intel-Chart">
-
 					<div class="intel-Chart-intel col-9">
 						<span>Total fuel</span>
 						<p class="mature">Kerosine(L)x10^5</p>
@@ -104,10 +112,10 @@
 				<canvas id="fuel" height="300" width="300"></canvas>
 			</div>
 
+
+			<!-- linechart speed -->
 			<div class="chart">
-
 				<div class="intel-Chart">
-
 					<div id="speedIntel" class="intel-Chart-intel col-9">
 						<span>Speed</span>
 						<p class="mature">Kilometres per hour(km/h)x10^3</p>
@@ -119,10 +127,9 @@
 				<canvas id="speed" height="300" width="300"></canvas>
 			</div>
 
+			<!-- linechart Acceleration -->
 			<div class="chart">
-
 				<div class="intel-Chart">
-
 					<div id="acceIntel" class="intel-Chart-intel col-9">
 						<span>Acceleration</span>
 						<p class="mature">(m/s^2)</p>
@@ -134,10 +141,9 @@
 				<canvas id="acce" height="300" width="300"></canvas>
 			</div>
 
+			<!-- barchart g-force -->
 			<div class="chart">
-
 				<div class="intel-Chart">
-
 					<div id="gIntel" class="intel-Chart-intel col-9">
 						<span>G-Force</span>
 						<p class="mature">(1G = 9.8m/s^2)</p>
@@ -150,18 +156,17 @@
 			</div>
 
 
-
-
-
+		</div>
 	</div>
-	</div>
+
+	<!-- spacetime grafieken -->
 	<div class="spaceTime-page">
 		<h1>Surroundings</h1>
 		<div class="charts">
+
+			<!-- grafiek gravity -->
 			<div class="chart">
-
 				<div class="intel-Chart">
-
 					<div id="gravIntel" class="intel-Chart-intel col-9">
 						<span>Gravity</span>
 						<p class="mature">(m/s^2)</p>
@@ -173,10 +178,9 @@
 				<canvas id="gravity" height="300" width="300"></canvas>
 			</div>
 
+			<!-- grafiek atmosfeer -->
 			<div class="chart">
-
 				<div class="intel-Chart">
-
 					<div id="atmosIntel" class="intel-Chart-intel col-9">
 						<span>Atmosfeer</span>
 						<p class="mature">(surrounding gases on mars)</p>
@@ -188,11 +192,10 @@
 				<canvas id="atmos" height="300" width="300"></canvas>
 			</div>
 
+			<!-- container voor distance -->
 			<div id="maxHeight"class="long chart">
-
 				<div class="intel-Chart">
-
-					<div id="atmosIntel" class="intel-Chart-intel col-9">
+					<div class="intel-Chart-intel col-9">
 						<span>
 							Distance</span>
 						<p class="mature">~54.6 million Kilometres</p>
@@ -213,11 +216,12 @@
 					</div>
 
 					<div class="process-bar">
+						<!-- container die process filled -->
 						<div class="process-fill">
-
 						</div>
 
 					</div>
+					<!-- footer distance -->
 					<div class="process-labels">
 						<h3>Aarde</h3>
 						<h2 id="monthsToGo">3 months togo</h2>
@@ -230,14 +234,12 @@
 
 		</div>
 
-
+		<!-- Twee grafieken over voorraad -->
 	<div class="stocks">
 		<h1>stocks</h1>
 		<div class="charts">
 			<div class="long chart">
-
 				<div class="intel-Chart">
-
 					<div id="gravIntel" class="intel-Chart-intel col-9">
 						<span>Stocks</span>
 						<p class="mature">water and food supp</p>
@@ -250,16 +252,19 @@
 					<canvas id="water" class="stockCharts" height="100" width="100"></canvas>
 					<canvas id="food" class="stockCharts" height="300" width="300"></canvas>
 				</div>
-
 			</div>
 	</div>
+
+
+
+	<!-- tools -->
 	<div class="Tools">
 			<h1>Tools</h1>
 			<div class="tools-container">
 
 
 
-
+				<!-- tool1 -->
 			<div class="tool-container">
 				<div class="tool-title">
 					<span>Weigt on mars</span>
@@ -274,6 +279,7 @@
 
 		</div>
 
+		<!-- tool2 -->
 		<div class="tool-container">
 			<div class="tool-title">
 				<span>your age on mars</span>
@@ -289,6 +295,7 @@
 	</div>
 	</div>
 	</div>
+	<!-- footer -->
 	<footer>
 		<h3>Created by Tijn Roozen</h3>
 		<h3>CMD 2C</h3>
@@ -296,14 +303,19 @@
 </body>
 
 
+<!-- js voor countdown -->
 <script type="text/javascript" src="javascript/countDown.js">
 </script>
 
+<!-- chart.js -->
 <script type="text/javascript" src="javascript/Chart.bundle.js">
 </script>
 
+<!-- bruh.js is voor hamburger menu -->
 <script type="text/javascript" src="javascript/bruh.js">
 </script>
+
+<!-- alle grafieken -->
 <script type="text/javascript" src="javascript/charts.js">
 </script>
 

@@ -1,3 +1,4 @@
+/* title */
 header{
   display: flex;
   flex-direction: column;
@@ -15,13 +16,8 @@ header{
 
 .toggle-container{
   display: flex;
-
   align-self: center;
 }
-
-
-
-
 
 .headItems{
   margin: 5% 0%;
@@ -30,7 +26,6 @@ header{
   grid-template-columns: 1fr 2fr 1fr;
   align-content: space-between;
   border-top: 1px solid rgba(4, 144, 140, 0.4);
-  /* box-shadow toegevoegt voor mooie gloed */
 
 }
 
@@ -41,8 +36,6 @@ text-align: center;
 .score{
   font-size: 1.2em;
 }
-
-
 
 .container-score{
   text-align: center;
@@ -72,7 +65,7 @@ text-align: center;
   grid-template-columns: repeat(auto-fill, 250px);
 
 }
-
+/* all items styling */
 .item{
   display: grid;
   grid-template-rows: 25% 75%;
@@ -104,19 +97,21 @@ padding: 5% 5%;
  width: 70%;
  padding: 2% 0% 0% 3%;
 }
-.title-container h1{
 
-}
+/* img in item */
 .img-container img{
   width: 40px;
   padding: auto;
+}
+
+.distance{
+  margin-top: 8%;
 }
 
 .fielt{
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 .fielt h3{
   margin-top: 8%;
@@ -129,6 +124,7 @@ padding: 5% 5%;
   font-size: 2em;
 }
 
+/* zon opkomst en ondergang */
 .riseSet{
   flex-direction: row;
   margin-top: 15%;
@@ -152,13 +148,13 @@ padding: 5% 5%;
   flex-direction: column;
   text-align: center;
   margin-top: 20%;
-
 }
 
 #bigMan{
   margin-top: 5%;
 }
 
+/* text in search bar */
 #city{
   margin-top: 25%;
 }
@@ -174,15 +170,14 @@ padding: 5% 5%;
   width: 60px;
 }
 
-
-
+/* search bar */
 #search{
   box-shadow: 0 -15px 15px rgba(4,144,140, 0.05),
               inset 0 -15px 15px rgba(4,144,140, 0.05),
               0 -15px 15px rgba(1,52,73, 0.3),
               inset 0 -15px 15px rgba(1,52,73, 0.3);
 }
-
+/* angel arrow */
 #arrow{
   width: 30px;
   align-self: center;
@@ -201,6 +196,7 @@ padding: 5% 5%;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
+/* toggle button graden styling */
 #toggle{
   width: 20px;
   height: 20px;
@@ -208,8 +204,10 @@ padding: 5% 5%;
   border-radius: 3px;
   background-color: #00f9ff;
   margin: 10px 10px;
+  cursor: pointer;
 }
 
+/* glow animation voor gradens */
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
@@ -219,6 +217,7 @@ padding: 5% 5%;
   }
 }
 
+/* mobiel */
 @media screen and (min-width:300px){
   .items{
     grid-template-columns: 250px;
@@ -233,6 +232,7 @@ padding: 5% 5%;
   }
 }
 
+/* ipad */
 @media screen and (min-width:768px){
   .items{
     grid-template-columns: repeat(2, 270px);
@@ -265,14 +265,26 @@ padding: 5% 5%;
 
 
 }
-
+/* splitscreen/ipad Pro */
 @media screen and (min-width:1024px){
   .items{
     grid-template-columns: repeat(3, 270px);
   }
 }
 
+/* fullscreen */
 @media screen and (min-width:1920px){
+  h3{
 
+    font-size: 1.2em;
+  }
+
+  .score{
+    font-size: 2em;
+  }
+.country{
+  padding-top: 10%;
+  font-size: 2em;
+}
 
 }
