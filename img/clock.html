@@ -8,15 +8,16 @@
 	<link rel="stylesheet" href="styles/space.css">
 	<link rel="stylesheet" href="styles/fonts.css">
 	<link rel="stylesheet" href="styles/clock.css">
+	<link rel="shortcut icon" href="img/x.ico" type="image/x-icon"/>
 
 	<title>Clock</title>
 </head>
 
 <body>
+
+	<!-- zelfde navigatie bar al bij de index.html -->
 	<nav>
 		<div class="logo">
-
-
 			<img class="logo" src="img/spacex-vector-logo.svg" alt="logo">
 		</div>
 
@@ -25,7 +26,7 @@
 				<a href="index.html">TRIP</a>
 			</li>
 			<li>
-				<a href="#">YOUR ACCOUNT</a></li>
+				<a href="return.html">RETURN</a></li>
 			<li>
 				<a href="clock.html">CLOCK</a>
 			</li>
@@ -41,11 +42,13 @@
   <div class="clock_window">
 
     <h1 class="titleClock col-12">SPACE CLOCK</h1>
-
+		<!-- Container waar de klok zich bevind -->
     	<div class="clock col-8">
-
+				<!-- Container die in een circle aangeeft of het donker of licht is. -->
         <div class="moveGround" id="moveGround">
             </div>
+
+						<!-- drie containers voor alle wijzers van de klok -->
         <div class="hour">
             <div class="hr" id='hr'></div>
         </div>
@@ -55,15 +58,16 @@
         <div class="sec">
             <div class="sc" id='sc'></div>
         </div>
-
-
-
-
-
       </div>
 
+
+			<!-- digitale timer -->
       <div class="timer ">
   			<table id="digitalTimer" class="countDownContainer">
+					<!-- seconde bar -->
+					<div class="secBar">
+
+					</div>
   				<tr class="numbers">
   					<td id="uren"></td>
   					<td id="minuten"></td>
@@ -79,7 +83,12 @@
 
 
 
+
   			</table>
+				<!-- minuten bar -->
+				<div class="minBar">
+
+				</div>
 
         </div>
 

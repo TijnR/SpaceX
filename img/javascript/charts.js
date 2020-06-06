@@ -425,7 +425,7 @@ console.log(ageMars);
 
 
 
-
+// om alle grafieken te tonen
 fuelLineChart();
 speedLineChart();
 acceLineChart();
